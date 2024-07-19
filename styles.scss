@@ -1,0 +1,181 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+// VARIABLES
+$ColorH2:  hsl(14, 45%, 36%);
+$ColorH3:  hsl(332, 51%, 32%);
+$ColorH1:  hsl(24, 5%, 18%);
+$ColorSpan:hsl(30, 10%, 34%);
+$ColorFondoG:hsl(30, 54%, 90%);
+$ColorLetras: hsl(30, 10%, 34%);
+
+.contenedor-general{
+    background-color:$ColorFondoG;
+    display: flex;
+    justify-content: center;
+}
+
+// CONTENEDOR OMELETT RECETA
+.contenedor-recetas{
+    background-color:  hsl(0, 0%, 100%);
+    width: 55%;
+    margin: 120px;
+    border-radius: 15px;
+    padding: 35px;
+
+    img{
+        border-radius: 10px;
+    }
+    h1{
+        color: $ColorH1;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 15px;
+    }
+    p{
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 15px;
+        padding-bottom:25px ;
+        color: $ColorLetras;
+    }
+   
+}
+
+// CONTENEDOR TARAJETA DE PREPARACION
+.contenedor-tarjetaP{
+        border-radius: 10px;
+        background-color:  hsl(330, 100%, 98%);
+        padding: 30px;
+
+        h3{
+            color: $ColorH3;
+            font-family: "Outfit", sans-serif;
+            padding-bottom: 10px;
+        }
+
+        ul{
+            list-style-type: none;
+            font-family: "Outfit", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        li{
+            margin-bottom: 10px;
+            color: $ColorLetras;
+        }
+        li::before {
+            content: "•";
+            color: $ColorH3; 
+            font-size: 20px; 
+            margin-right: 20px;
+          }
+      
+          li strong {
+            color: $ColorH1; 
+          }
+}
+// CONTENEDOR INGREDIENTES
+.contenedor-Ingredientes{
+    h2{
+        color: $ColorH2;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 20px;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    ul{
+        list-style-type: none;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 25px;
+
+    }
+    li{
+        margin-bottom: 10px;
+        color: $ColorLetras;
+    }
+    li::before {
+        content: "•";
+        color: $ColorH2; 
+        font-size: 20px; 
+        margin-right: 20px;
+      }
+    
+}
+// CONTENEDOR INSTRUCCIONES
+.contenedor-instrucciones{
+    h2{
+        color: $ColorH2;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 20px;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    ol{
+        list-style-type: none;
+        counter-reset: item;
+        padding-left: 0;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    li{
+        margin-bottom: 10px;
+        color: $ColorLetras;
+    }
+    li::before {
+        // content: "•";
+        content: counter(item) ". "; /* Añade el número manualmente */
+      counter-increment: item; /* Incrementa el contador de la lista */
+        color: $ColorH2; 
+        font-size: 17px; 
+        margin-right: 20px;
+        font-weight: bold;
+      }
+  
+      li strong {
+        color: $ColorH1; 
+      }
+}
+// `CONTENEDOR NUTRICION
+.contenedor-nutricion{
+    .contenedor-ncard{
+        display: flex;
+        justify-content: space-around;
+
+
+        p{
+            padding:10px;
+            margin-right: 30%;
+            color: $ColorLetras;
+        }
+        strong{
+            color: $ColorH2;
+        }
+    }
+}
+// MEDIA QUERIES
+@media (max-width: 500px) {
+    .contenedor-recetas {
+      width: 100%; 
+      margin: 0%;
+    }
+  }
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
